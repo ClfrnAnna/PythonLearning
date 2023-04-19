@@ -18,3 +18,6 @@ def convert(x):
 
 
 convert(int(input()))
+
+val = input()
+print(" ".join(list(map(lambda x: str(x)[2:],  (bin(int(val)), oct(int(val)), hex(int(val)))))))
