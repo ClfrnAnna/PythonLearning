@@ -2,8 +2,8 @@ SELECT em.name, jt.job, jt.salary
 FROM employee AS em
 JOIN job_title jt ON em.job_title_id = jt.id
 JOIN vacation vac ON em.id = vac.employee_id
-WHERE em.child = true 
-OR em.retiree = true
+WHERE (em.child = true 
+OR em.retiree = true)
 AND CURRENT_DATE 
 BETWEEN vac.data_from and data_to;
 
