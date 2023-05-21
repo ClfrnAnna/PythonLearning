@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>The task update</h1>
+    <form method="post">
+        <div class="rendered-form">
+            <div class="formbuilder-select form-group field-select-1684683422249">
+                <label for="select-1684683422249" class="formbuilder-select-label">Status<span class="formbuilder-required">*</span></label>
+                <select class="form-control" name="status" id="select-1684683422249" required="required" aria-required="true">
+                    <option value="UNCHECKED" selected="true" id="select-1684683422249-0">Unchecked</option>
+                    <option value="SOLVED" id="select-1684683422249-1">Solved</option>
+                </select>
+            </div>
+            <div class="formbuilder-button form-group field-button-1684683555728">
+                <button type="submit" class="btn-success btn" name="button-1684683555728" access="false" style="success" id="button-1684683555728">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

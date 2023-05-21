@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>All tasks</h1>
+    <p>| id | status | difficulty_level | student_id | lesson_id |</p>
+    <br>
+    {% for task in tasks %}
+        <p>| {{ task.id }} | {{ task.status }} | {{ task.difficulty_level }} | {{ task.student_id }} | {{ task.lesson_id }} |</p>
+    {% endfor %}
+{% endblock %}

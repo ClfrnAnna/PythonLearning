@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Students</h1>
+    <br>
+    {% for student in students %}
+        <p>| {{ student.id }} | {{ student.first_name }} | {{ student.last_name }} | {{ student.second_name }} | {{ student.group_id }} |</p>
+    {% endfor %}
+{% endblock %}
