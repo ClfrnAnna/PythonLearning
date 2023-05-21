@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Creating a former job of the employee</h1>
+    <form method="post">
+        <div class="rendered-form">
+            <div class="formbuilder-text form-group field-text-1684688811227">
+                <label for="text-1684688811227" class="formbuilder-text-label">Name<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="text" class="form-control" name="name" access="false" value="{{ request.form['name'] }}" maxlength="50" id="text-1684688811227" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-text form-group field-text-1684688811227">
+                <label for="text-1684688811227" class="formbuilder-text-label">Job title<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="text" class="form-control" name="job_title" access="false" value="{{ request.form['job_title'] }}" maxlength="50" id="text-1684688811227" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-text form-group field-text-1684688811227">
+                <label for="text-1684688811227" class="formbuilder-text-label">Term<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="text" class="form-control" name="term" access="false" value="{{ request.form['term'] }}" maxlength="50" id="text-1684688811227" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-date form-group field-date-1684697108038">
+                <label for="date-1684697108038" class="formbuilder-date-label">Date start<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="date" class="form-control" name="date_start" value="{{ request.form['date_start'] }}" access="false" id="date-1684697108038" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-button form-group field-button-1684532697147">
+                <button type="submit" class="btn-default btn" name="button-1684532697147" access="false" style="default" id="button-1684532697147">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Creating a job title</h1>
+    <form method="post">
+        <div class="rendered-form">
+            <div class="formbuilder-text form-group field-text-1684532405973">
+                <label for="text-1684532405973" class="formbuilder-text-label">Job</label>
+                <br>
+                <input type="text" class="form-control" name="job" access="false" value="{{ request.form['job'] }}" id="text-1684532405973">
+            </div>
+            <br>
+            <div class="formbuilder-text form-group field-text-1684532405973">
+                <label for="text-1684532405973" class="formbuilder-text-label">Salary</label>
+                <br>
+                <input type="text" class="form-control" name="salary" access="false" value="{{ request.form['salary'] }}" id="text-1684532405973">
+            </div>
+            <br>
+            <div class="formbuilder-button form-group field-button-1684532697147">
+                <button type="submit" class="btn-default btn" name="button-1684532697147" access="false" style="default" id="button-1684532697147">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

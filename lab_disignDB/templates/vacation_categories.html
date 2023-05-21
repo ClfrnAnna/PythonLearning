@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Creating a vacation category</h1>
+    <form method="post">
+        <div class="rendered-form">
+            <div class="formbuilder-text form-group field-text-1684532405973">
+                <label for="text-1684532405973" class="formbuilder-text-label">Category name</label>
+                <br>
+                <input type="text" class="form-control" name="category_name" access="false" value="{{ request.form['category_name'] }}" id="text-1684532405973">
+            </div>
+            <br>
+            <div class="formbuilder-button form-group field-button-1684532697147">
+                <button type="submit" class="btn-default btn" name="button-1684532697147" access="false" style="default" id="button-1684532697147">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

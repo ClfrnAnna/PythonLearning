@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Creating an employee</h1>
+    <form method="post">
+        <div class="rendered-form">
+            <div class="formbuilder-text form-group field-text-1684688811227">
+                <label for="text-1684688811227" class="formbuilder-text-label">Name<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="text" class="form-control" name="name" access="false" value="{{ request.form['name'] }}" maxlength="50" id="text-1684688811227" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-date form-group field-date-1684697108038">
+                <label for="date-1684697108038" class="formbuilder-date-label">Date of birth<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="date" class="form-control" name="dob" value="{{ request.form['dob'] }}" access="false" id="date-1684697108038" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-select form-group field-select-1684697331990">
+                <label for="select-1684697331990" class="formbuilder-select-label">Child<span class="formbuilder-required">*</span></label>
+                <select class="form-control" name="child" id="select-1684697331990" required="required" aria-required="true">
+                    <option value="1" selected="true" id="select-1684697331990-0">True</option>
+                    <option value="0" id="select-1684697331990-1">False</option>
+                </select>
+            </div>
+            <br>
+            <div class="formbuilder-select form-group field-select-1684697333455">
+                <label for="select-1684697333455" class="formbuilder-select-label">Disability<span class="formbuilder-required">*</span></label>
+                <select class="form-control" name="disability" id="select-1684697333455" required="required" aria-required="true">
+                    <option value="1" selected="true" id="select-1684697333455-0">True</option>
+                    <option value="0" id="select-1684697333455-1">False</option>
+                </select>
+            </div>
+            <br>
+            <div class="formbuilder-select form-group field-select-1684697334481">
+                <label for="select-1684697334481" class="formbuilder-select-label">Retiree</label>
+                <select class="form-control" name="retiree" id="select-1684697334481">
+                    <option value="1" selected="true" id="select-1684697334481-0">True</option>
+                    <option value="0" id="select-1684697334481-1">False</option>
+                </select>
+            </div>
+            <br>
+            <div class="formbuilder-button form-group field-button-1684532697147">
+                <button type="submit" class="btn-default btn" name="button-1684532697147" access="false" style="default" id="button-1684532697147">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Creating a vacation for the employee</h1>
+    <form method="post">
+        <div class="rendered-form">
+            <div class="formbuilder-date form-group field-date-1684697108038">
+                <label for="date-1684697108038" class="formbuilder-date-label">Date from<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="date" class="form-control" name="data_from" value="{{ request.form['data_from'] }}" access="false" id="date-1684697108038" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-date form-group field-date-1684697108038">
+                <label for="date-1684697108038" class="formbuilder-date-label">Date to<span class="formbuilder-required">*</span></label>
+                <br>
+                <input type="date" class="form-control" name="data_to" value="{{ request.form['data_to'] }}" access="false" id="date-1684697108038" required="required" aria-required="true">
+            </div>
+            <br>
+            <div class="formbuilder-select form-group field-select-1684697331990">
+                <label for="select-1684697331990" class="formbuilder-select-label">Child<span class="formbuilder-required">*</span></label>
+                <select class="form-control" name="categorys_vacation_id" id="select-1684697331990" required="required" aria-required="true">
+                    {% for category_vacation in category_vacations %}
+                        <option value="{{ category_vacation.id }}" selected="true" id="select-1684697331990-0">{{ category_vacation.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <br>
+            <div class="formbuilder-button form-group field-button-1684532697147">
+                <button type="submit" class="btn-default btn" name="button-1684532697147" access="false" style="default" id="button-1684532697147">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
