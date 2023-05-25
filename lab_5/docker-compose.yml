@@ -1,0 +1,11 @@
+---
+version: '3.9'
+services:
+  postgres:
+    container_name: education
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD: education
+      POSTGRES_USER: education
+    ports:
+      - "5432:5432"
